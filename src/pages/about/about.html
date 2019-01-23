@@ -1,11 +1,22 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
-  </ion-navbar>
+<ion-navbar *navbar>
+  <ion-title>
+    Camera
+  </ion-title>
+</ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content class="home">
+  <ion-card>
+    <ion-card-content>
+      Hello World, this is my camera app
 
+      <button (click)="onTakePicture()">Take a Picture</button>
+
+      Latest Picture:
+      <img [src]="image" *ngIf="image" />
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+
+
