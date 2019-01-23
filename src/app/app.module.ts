@@ -12,6 +12,7 @@ import { AddFeedPage } from '../pages/add-feed/add-feed';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Camera } from '@ionic-native/camera';
+import { CameraMock } from './camera.mock';
 
 @NgModule({
   declarations: [
@@ -37,9 +38,10 @@ import { Camera } from '@ionic-native/camera';
   ],
   providers: [
     StatusBar,
-    Camera,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Camera
+    //{provide: Camera, useClass: CameraMock}
   ]
 })
 export class AppModule {}
